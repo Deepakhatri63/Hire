@@ -362,7 +362,7 @@ function sendDataToServer() {
   }
 }
 
-// Function to display an alert message
+// Function to display an alert message// Function to display an alert message
 const displayAlert = (message) => {
   const alertBox = document.createElement("div");
   alertBox.className = "alert-message";
