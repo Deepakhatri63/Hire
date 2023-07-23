@@ -6,6 +6,9 @@
     z-index: 100;
     transition: box-shadow 0.3s ease;
     top: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .content {
@@ -36,20 +39,11 @@
     color: rgb(212, 5, 5);
 }
 
-.contact {
-    margin-right: 3rem;
-}
 
-.container {
-    display: flex;
-    justify-content: flex-end;
-    width: 1300px;
-    align-items: center;
-}
 
-.container a {
-    padding: 20px 25px;
-}
+
+
+
 
 .work-process {
     display: flex;
@@ -97,7 +91,8 @@
     margin-left: 5rem;
     margin-top: 2rem;
     position: relative;
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 100;
 }
 
 .circle-icon {
@@ -124,8 +119,8 @@
     height: auto;
     margin-left: 6.5rem;
     margin-top: 1.8rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: 800;
+    font-family: 'DM Serif Display', serif;
+
     font-size: 1.1rem;
 }
 
@@ -164,12 +159,12 @@
 
 .first h1 {
     font-size: 25px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
 }
 
 .first p {
     font-size: 18px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     margin-top: 1.7rem;
 }
 
@@ -216,12 +211,12 @@
 
 .second h1 {
     font-size: 25px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
 }
 
 .second p {
     font-size: 18px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     margin-top: 1.7rem;
 }
 
@@ -268,12 +263,12 @@
 
 .third h1 {
     font-size: 25px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
 }
 
 .third p {
     font-size: 18px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     margin-top: 1.7rem;
 }
 
@@ -323,12 +318,12 @@
 
 .fourth h1 {
     font-size: 25px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Serif Display', serif;
 }
 
 .fourth p {
     font-size: 18px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     margin-top: 1.7rem;
 }
 
@@ -359,7 +354,7 @@
 .right-1 {
     margin-left: 11.4rem;
     width: 50%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .first-h5 {
@@ -445,7 +440,7 @@ input[type="text"] {
 .right-2 {
     margin-left: 11.4rem;
     width: 50%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .right-2 h5 {
@@ -463,7 +458,7 @@ textarea {
     border-radius: 10px;
     font-size: 16px;
     resize: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .range-slider {
@@ -571,7 +566,7 @@ textarea {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     width: 40%;
     line-height: 1.2em;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 900;
 }
 
@@ -628,7 +623,7 @@ input[type='checkbox'] {
     border-radius: 10px;
     width: 30%;
     line-height: 1.2em;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 900;
     border: 1px solid #a7a3a3;
 }
@@ -659,7 +654,7 @@ input[type='checkbox'] {
     padding: 0;
     flex-direction: column;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 h1,
@@ -726,7 +721,7 @@ button#nextButton {
     border-radius: 8px;
     width: 200px;
     height: 40px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1rem;
     font-weight: 800;
 }
@@ -743,7 +738,7 @@ button#nextButton {
     border-radius: 8px;
     width: 80px;
     height: 40px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1rem;
     font-weight: 800;
 }
@@ -771,6 +766,108 @@ button#nextButton {
     color: white;
 }
 
+
+.circle-icons {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(150, 144, 162, 0.08);
+    /* Set your desired grey color */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 4rem;
+}
+
+.circle-icons::before,
+.circle-icons::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    /* Set the line color to white */
+}
+
+.circle-icons::before {
+    top: 40%;
+    /* Adjust the position of the first line */
+    width: 22px;
+
+}
+
+.circle-icons::after {
+    top: 57%;
+    /* Adjust the position of the second line */
+    width: 18px;
+    height: 2px;
+}
+
+/* Center the lines horizontally */
+.circle-icons::before,
+.circle-icons::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle-icons::after {
+    left: 46.3%;
+}
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -310px;
+    /* Move the sidebar off-screen initially from the right */
+    width: 300px;
+    /* Set your desired sidebar width */
+    height: 100%;
+    background-color: #000000d8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    /* Add shadow to the sidebar */
+    /* Set your desired sidebar background color */
+    transition: right 0.7s ease;
+    /* Use right instead of left for the transition */
+    z-index: 1000;
+}
+
+.close-icon {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 16.5rem;
+    color: white;
+}
+
+.close-icon:hover {
+    color: #f64545;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    /* Adjust the spacing as needed */
+}
+
+.container a {
+    padding: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #ffffff;
+    /* Set your desired link color */
+    font-size: 1.3rem;
+}
+
+.container a:hover {
+    color: #f64545;
+    /* Set your desired red color on hover */
+}
+
+/* Additional styles for improved appearance */
 
 
 
@@ -801,6 +898,17 @@ button#nextButton {
 
 
 @media only screen and (max-width: 800px) {
+    .navbar .logo {
+        max-width: 100px;
+        min-height: 40px;
+        margin-left: 0;
+    }
+
+    .circle-icons {
+        
+        margin-right: 2rem;
+    }
+
     .navbar .container {
         display: none;
     }
@@ -810,26 +918,38 @@ button#nextButton {
         width: 100%;
     }
 
-    .navbar .hamburger {
-        display: block;
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        /* Move the sidebar off-screen initially from the right */
+        width: 300px;
+        /* Set your desired sidebar width */
+        height: 100%;
+        background-color: #000000d8;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        /* Add shadow to the sidebar */
+        /* Set your desired sidebar background color */
+        transition: left 0.6s ease;
+        /* Use right instead of left for the transition */
+        z-index: 1000;
     }
 
-    .navbar.responsive {
-        background-color: #f3f3f3;
-        position: relative;
-    }
-
-    .navbar.responsive .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .navbar.responsive .container a {
+    .container a {
         padding: 10px;
-        text-align: center;
+        text-decoration: none;
+        font-weight: 700;
+        color: #ffffff;
+        /* Set your desired link color */
+        font-size: 1.2rem;
+    }
+
+    .close-icon {
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: 17rem;
+        color: white;
     }
 
     .vertical-line,
@@ -1023,7 +1143,6 @@ button#nextButton {
         font-weight: 520;
         cursor: pointer;
         transition: background-color 0.6s, color 0.3s;
-
     }
 
 }

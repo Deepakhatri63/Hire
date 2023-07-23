@@ -8,31 +8,47 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200&family=DM+Serif+Display&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     <script type="text/javascript">
-        (function() {
-            emailjs.init("PWPCGmT4fMbanb-lI");
+        (function () {
+            emailjs.init("7xYrX_z4NbbuIo_bP");
         })();
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Playfair+Display+SC&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Playfair+Display+SC&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="navbar">
         <a href="#"><img class="logo" src="images/logo1.png" alt="Logo"></a>
+        <div class="circle-icons" onclick="toggleSidebar()">
+
+        </div>
+        
+
+    </div>
+
+    <div class="sidebar">
+        <div class="close-icon" onclick="toggleSidebar()">&#10006;</div>
+
         <div class="container">
-            <a href="#">About Us</a>
-            <a href="#">Works</a>
-            <a href="#">Articles</a>
-            <a class="contact" href="#">Contact</a>
+            <a href="#">About</a>
+            <a href="#">Course Delivery</a>
+            <a href="#">Immersive Learning Delivery</a>
+            <a href="#">Continuous Learning Delivery</a>
+            <a href="#">Multimedia Development</a>
+            <a href="#">Learning Technologies</a>
+            <a href="#">L&D Advisory</a>
         </div>
-        <div class="hamburger" onclick="toggleNavbar()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
+    </div>
+
     </div>
     <div class="content">
         <div class="work-process">
@@ -44,7 +60,8 @@
                 <i class="fa fa-file-text-o"></i>
             </div>
             <div class="h2title">
-                <h2>To ensure our next face-to-face virtual meeting remains highly productive, let's collaborate and create something truly awesome together. Kindly follow the simple instructions provided below.</h2>
+                <h2>To ensure our next face-to-face virtual meeting remains highly productive, let's collaborate and
+                    create something truly awesome together. Kindly follow the simple instructions provided below.</h2>
             </div>
         </div>
 
@@ -52,7 +69,8 @@
         <div class="first">
             <div class="left-1">
                 <h1>Understanding you better</h1>
-                <p>Could you kindly assist us in getting to know you better by sharing some details about your communication preferences and contact information? Your cooperation would be truly appreciated.</p>
+                <p>Could you kindly assist us in getting to know you better by sharing some details about your
+                    communication preferences and contact information? Your cooperation would be truly appreciated.</p>
             </div>
             <div class="circle1">
                 <div class="number1">1</div>
@@ -92,7 +110,8 @@
         <div class="second">
             <div class="left-2">
                 <h1>Requirements Gathering</h1>
-                <p>Allow us to understand your vision and ambition to make this product live. This will help us to answer your queries promptly.
+                <p>Allow us to understand your vision and ambition to make this product live. This will help us to
+                    answer your queries promptly.
                 </p>
             </div>
             <div class="circle2">
@@ -101,7 +120,8 @@
             <div class="right-2">
                 <h1>Please explain your requirement?</h1>
                 <h5>Describe your project in brief*</h5>
-                <textarea placeholder="I wanted to develop content for…..or i will need elearning development" name="projectDescription"></textarea>
+                <textarea placeholder="I wanted to develop content for…..or i will need elearning development"
+                    name="projectDescription"></textarea>
                 <h5>May i know how much budget will you be allocating for this product? (Approx would help)</h5>
                 <div class="range">
                     <div class="range-price">
@@ -130,7 +150,9 @@
         <div class="third">
             <div class="left-3">
                 <h1>Assigning a subject matter expert</h1>
-                <p>By gracefully choosing one or more services from the list provided to the right, we will be able to add a couple of more experts from the relevant vertical and they will be part of our upcoming virtual meeting.
+                <p>By gracefully choosing one or more services from the list provided to the right, we will be able to
+                    add a couple of more experts from the relevant vertical and they will be part of our upcoming
+                    virtual meeting.
                 </p>
             </div>
             <div class="circle3">
@@ -144,20 +166,24 @@
                             <input type="checkbox" name="option1" value="Course Development"> Course Development
                         </label>
                         <label>
-                            <input type="checkbox" name="option2" value="Instructional Design Services"> Instructional Design Services
+                            <input type="checkbox" name="option2" value="Instructional Design Services"> Instructional
+                            Design Services
                         </label>
                     </div>
                     <div class="options-row">
                         <label>
-                            <input type="checkbox" name="option3" value="Multi-media Development"> Multi-media Development
+                            <input type="checkbox" name="option3" value="Multi-media Development"> Multi-media
+                            Development
                         </label>
                         <label>
-                            <input type="checkbox" name="option4" value="ILT or VLT or eLearning Development"> ILT or VLT or eLearning Development
+                            <input type="checkbox" name="option4" value="ILT or VLT or eLearning Development"> ILT or
+                            VLT or eLearning Development
                         </label>
                     </div>
                     <div class="options-row">
                         <label>
-                            <input type="checkbox" name="option5" value="Trainers or Subject Matter experts"> Trainers or Subject Matter experts
+                            <input type="checkbox" name="option5" value="Trainers or Subject Matter experts"> Trainers
+                            or Subject Matter experts
                         </label>
                         <label>
                             <input type="checkbox" name="option6" value="Course Curation"> Course Curation
@@ -181,7 +207,8 @@
         <div class="fourth">
             <div class="left-4">
                 <h1>Okay, just one last step. Let’s block a time convenient to you.</h1>
-                <p>Join our inaugural virtual meet for meaningful discussions, creative brainstorming, and finalizing project requirements. Together, we'll craft thoughtful action points for a successful outcome.
+                <p>Join our inaugural virtual meet for meaningful discussions, creative brainstorming, and finalizing
+                    project requirements. Together, we'll craft thoughtful action points for a successful outcome.
                 </p>
             </div>
             <div class="circle4">

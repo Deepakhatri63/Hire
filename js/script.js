@@ -97,10 +97,18 @@ nextButton.addEventListener('click', function () {
 
 
 // Navbar -------------------------------------------
-function toggleNavbar() {
-  var navbar = document.querySelector(".navbar");
-  navbar.classList.toggle("responsive");
+
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  if (window.innerWidth <= 800) {
+      sidebar.style.left = sidebar.style.left === '0px' ? '-300px' : '0px';
+  } else {
+      sidebar.style.right = sidebar.style.right === '0px' ? '-310px' : '0px';
+  }
 }
+
+
+
 window.addEventListener("scroll", function () {
   var navbar = document.querySelector(".navbar");
   var scrolled = window.scrollY;
@@ -352,7 +360,7 @@ function sendDataToServer() {
           Head - Partnership and Alliance`,
         };
 
-        emailjs.send("service_5316j36", "template_1hjhtki", params)
+        emailjs.send("service_wrn9t3z", "template_a2awg75", params)
 
       })
 
