@@ -821,9 +821,9 @@ button#nextButton {
 .sidebar {
     position: fixed;
     top: 0;
-    right: -310px;
+    right: -360px;
     /* Move the sidebar off-screen initially from the right */
-    width: 300px;
+    width: 350px;
     /* Set your desired sidebar width */
     height: 100%;
     background-color: #000000d8;
@@ -838,18 +838,20 @@ button#nextButton {
 .close-icon {
     font-size: 24px;
     cursor: pointer;
-    margin-left: 16.5rem;
+    margin-left: 19.5rem;
     color: white;
 }
 
 .close-icon:hover {
-    color: #f64545;
+    color: #f51e1e;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    flex-wrap: wrap;
+    position: relative;
     /* Adjust the spacing as needed */
 }
 
@@ -863,9 +865,157 @@ button#nextButton {
 }
 
 .container a:hover {
-    color: #f64545;
+    color: #ff1919;
     /* Set your desired red color on hover */
 }
+
+.dropdown-list a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #000000d8;
+    color: rgb(241, 238, 238);
+    height: auto;
+}
+
+.dropdown-list a:hover {
+    color: rgb(254, 39, 39);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-list {
+    display: none;
+    background-color: #000000d8;
+    list-style: none;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.dropdown-list li {
+    margin: 1rem;
+}
+
+.show-dropdown .dropdown-list {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.container.show-dropdown {
+    padding-bottom: 150px;
+    /* Adjust this value to provide enough space for the dropdown */
+}
+
+.dropdown-list2 a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #000000d8;
+    color: rgb(241, 238, 238);
+}
+
+.dropdown-list2 a:hover {
+    color: rgb(254, 39, 39);
+}
+
+.dropdown2 {
+    position: relative;
+}
+
+.dropdown-list2 {
+    display: none;
+    background-color: #000000d8;
+    list-style: none;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.dropdown-list2 li {
+    margin: 1rem;
+}
+
+.show-dropdown2 .dropdown-list2 {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.container.show-dropdown2 {
+    padding-bottom: 120px;
+    /* Adjust this value to provide enough space for the dropdown */
+}
+
+.dropdown-list3 a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #000000d8;
+    color: rgb(241, 238, 238);
+}
+
+.dropdown-list3 a:hover {
+    color: rgb(254, 39, 39);
+}
+
+.dropdown3 {
+    position: relative;
+}
+
+.dropdown-list3 {
+    display: none;
+    background-color: #000000d8;
+    list-style: none;
+    padding: 5px 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.dropdown-list3 li {
+    margin: 1rem;
+}
+
+.show-dropdown3 .dropdown-list3 {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.container.show-dropdown3 {
+    padding-bottom: 120px;
+    /* Adjust this value to provide enough space for the dropdown */
+}
+
+a.space {
+    padding-bottom: 20px;
+    /* Add padding to create space around the text */
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Additional styles for improved appearance */
 
@@ -905,7 +1055,7 @@ button#nextButton {
     }
 
     .circle-icons {
-        
+
         margin-right: 2rem;
     }
 
