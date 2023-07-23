@@ -328,7 +328,7 @@ function sendDataToServer() {
       .then((response) => response.text())
       .then((message) => {
         // Show the success message
-        displayAlert("Form submitted successfully!");
+        // displayAlert("Form submitted successfully!");
 
         // Send the email using EmailJS
         const params = {
@@ -414,15 +414,17 @@ const validateForm = () => {
   }
 
   // Form is valid, you can proceed with form submission or any other action here
-  displayAlert("Succesfully Submitted");
+  displayAlert("Successfully Submitted");
+  return; // Add this line to exit the function
 
   // Uncomment the following line to submit the form to the server
   // document.getElementById("myForm").submit();
 };
 
-// Handling form submission event
-document.getElementById("sendDataButton").addEventListener("click", validateForm);
-
+// Attach the event listener to the button after the page has fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("sendDataButton").addEventListener("click", validateForm);
+});
 
 
 
