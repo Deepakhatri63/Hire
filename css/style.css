@@ -922,9 +922,9 @@ button#nextButton {
     .sidebar {
         position: fixed;
         top: 0;
-        right: -300px;
+        right: -400px;
         /* Move the sidebar off-screen initially from the right */
-        width: 300px;
+        width: 400px;
         /* Set your desired sidebar width */
         height: 100%;
         background-color: #000000d8;
@@ -942,13 +942,13 @@ button#nextButton {
         font-weight: 700;
         color: #ffffff;
         /* Set your desired link color */
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .close-icon {
         font-size: 24px;
         cursor: pointer;
-        margin-left: 17rem;
+        margin-left: 23rem;
         color: white;
     }
 

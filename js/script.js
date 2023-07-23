@@ -101,7 +101,7 @@ nextButton.addEventListener('click', function () {
 function toggleSidebar() {
   const sidebar = document.querySelector('.sidebar');
   if (window.innerWidth <= 800) {
-      sidebar.style.left = sidebar.style.left === '0px' ? '-300px' : '0px';
+      sidebar.style.left = sidebar.style.left === '0px' ? '-400px' : '0px';
   } else {
       sidebar.style.right = sidebar.style.right === '0px' ? '-310px' : '0px';
   }
