@@ -92,26 +92,6 @@ nextButton.addEventListener('click', function () {
 
 
 
-
-
-
-
-
-
-
-// Navbar -------------------------------------------
-
-// function toggleSidebar() {
-//   const sidebar = document.querySelector('.sidebar');
-//   if (window.innerWidth <= 800) {
-//     sidebar.style.left = sidebar.style.left === '0px' ? '-400px' : '0px';
-//   } else {
-//     sidebar.style.right = sidebar.style.right === '0px' ? '-360px' : '0px';
-//   }
-// }
-
-
-
 window.addEventListener("scroll", function () {
   var navbar = document.querySelector(".navbar");
   var scrolled = window.scrollY;
@@ -287,67 +267,50 @@ function getSelectedCardDate() {
 // E-mail sender ------------------------------------------------
 
 function sendDataToServer() {
-  const name = document.querySelector("input[name='name']").value;
-  const email = document.querySelector("input[name='email']").value;
-  const phoneNumber = document.querySelector("input[name='phoneNumber']").value;
-  const companyOrBrand = document.querySelector("input[name='companyOrBrand']").value;
-  const websiteURL = document.querySelector("input[name='websiteURL']").value;
-  const projectDescription = document.querySelector("textarea[name='projectDescription']").value;
-  const minBudget = document.querySelector("input[name='min']").value;
-  const maxBudget = document.querySelector("input[name='max']").value;
 
-  const selectedServices = [];
-  const serviceCheckboxes = document.querySelectorAll("input[type='checkbox'][name^='option']");
-  serviceCheckboxes.forEach((checkbox) => {
-    if (checkbox.checked) {
-      selectedServices.push(checkbox.value);
-    }
-  });
+  const template_params = {
+    name: document.querySelector("input[name='name']").value,
+    email: document.querySelector("input[name='email']").value,
+    phoneNumber: document.querySelector("input[name='phoneNumber']").value,
+    companyOrBrand: document.querySelector("input[name='companyOrBrand']").value,
+    websiteURL: document.querySelector("input[name='websiteURL']").value,
+    projectDescription: document.querySelector("textarea[name='projectDescription']").value,
+    minBudget: document.querySelector("input[name='min']").value,
+    maxBudget: document.querySelector("input[name='max']").value,
+    selectedServices: [...document.querySelectorAll("input[type='checkbox'][name^='option']")]
+      .filter(checkbox => checkbox.checked)
+      .map(checkbox => checkbox.value),
+    selectedTime: document.querySelector("#time-select").value,
+    selectedTimeZone: document.querySelector(".select-2").value,
+    from_email: document.querySelector("input[name='email']").value 
+  };
 
-  const selectedTime = document.querySelector("#time-select").value;
-  const selectedTimeZone = document.querySelector(".select-2").value;
   const selectedDate = getSelectedCardDate();
   if (selectedDate) {
-    // Merge the date data with the rest of the data
-    const data = {
-      name,
-      email,
-      phoneNumber,
-      companyOrBrand,
-      websiteURL,
-      projectDescription,
-      minBudget,
-      maxBudget,
-      selectedServices,
-      selectedDay: selectedDate.day,
-      selectedDate: selectedDate.date,
-      selectedMonth: selectedDate.month,
-      selectedTime,
-      selectedTimeZone,
-    };
+    template_params.selectedDay = selectedDate.day;
+    template_params.selectedDate = selectedDate.date;
+    template_params.selectedMonth = selectedDate.month;
+  }
 
+  emailjs.send("service_wrn9t3z", "template_1ej152e", template_params)
+    .then((response) => {
+      console.log('Email sent successfully!', response);
+      // Handle any success message or UI update here if needed
+    }, (error) => {
+      console.error('Failed to send email:', error);
+      // Handle any error message or UI update here if needed
+    });
 
+  // Show the success message
+  // displayAlert("Form submitted successfully!");
 
-    // Send the data to the server using fetch API
-    fetch("store_data.php", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => response.text())
-      .then((message) => {
-        // Show the success message
-        // displayAlert("Form submitted successfully!");
-
-        // Send the email using EmailJS
-        const params = {
-          to_email: email,
-          from_name: 'AlphaFactory',
-          to_name: 'Recipient',
-          subject: 'Your Subject',
-          body: `अतिथिदेवो भव (atithidevo bhava), meaning: 'treat the guest as God'.
+  // Send the email using EmailJS
+  const params = {
+    to_email: document.querySelector("input[name='email']").value,
+    from_name: 'AlphaFactory',
+    to_name: 'Recipient',
+    subject: 'Your Subject',
+    body: `अतिथिदेवो भव (atithidevo bhava), meaning: 'treat the guest as God'.
 
           I hope this email finds you well. I am writing to express our sincerest thanks for taking the time to fill out the form on our website. Your initiative means a lot to us, and we are genuinely humbled by your interest in our services.
           
@@ -361,16 +324,21 @@ function sendDataToServer() {
           
           Daisy Roberts
           Head - Partnership and Alliance`,
-        };
+  };
 
-        emailjs.send("service_wrn9t3z", "template_a2awg75", params)
+  emailjs.send("service_wrn9t3z", "template_a2awg75", params)
+    .then((response) => {
+      console.log('Email sent successfully!', response);
+      // Handle any success message or UI update here if needed
+    })
+    .catch((error) => {
+      console.error('Failed to send email:', error);
+      // Handle any error message or UI update here if needed
+    });
 
-      })
 
-  } else {
-    // Show an error message if a date is not selected
-    ("Please select a date from the cards.");
-  }
+
+
 }
 
 // Function to display an alert message// Function to display an alert message
