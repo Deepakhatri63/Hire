@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200&family=DM+Serif+Display&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
@@ -28,57 +31,63 @@
 <body>
     <div class="navbar">
         <a href="#"><img class="logo" src="images/logo1.png" alt="Logo"></a>
-        <div class="circle-icons" onclick="toggleSidebar()">
+        <div class="circle-icons"></div>
 
-        </div>
+
 
 
     </div>
 
-    <div class="sidebar">
-        <div class="close-icon" onclick="toggleSidebar()">&#10006;</div>
-
-        <div class="container">
-            <a href="#">About</a>
-
-            <div class="dropdown">
-                <a class="space" href="#" onclick="toggleDropdown()">Course Delivery +</a>
-                <ul class="dropdown-list" id="dropdownList">
-                    <li><a href="#">ILT Development</a></li>
-                    <li><a href="#">eLearning Development</a></li>
-                    <li><a href="#">Virtual & Blended Learning</a></li>
-                    <li><a href="#">Curriculum Development</a></li>
-                    <li><a href="#">Language Translations</a></li>
-                    <li><a href="#">Labs as service</a></li>
-                </ul>
+    <div class="side-bar">
+        <header>
+            <div class="close-btn">
+                <i class="fas fa-times"></i>
             </div>
-            <div class="dropdown2">
-                <a class="space" href="#" onclick="toggleDropdown2()">Immersive Learning Delivery +</a>
-                <ul class="dropdown-list2" id="dropdownList2">
-                    <li><a href="#">Scenario Based Delivery</a></li>
-                    <li><a href="#">Gamification</a></li>
-                    <li><a href="#">Interactive Video Learning</a></li>
-                    <li><a href="#">Branch Simulations</a></li>
-                </ul>
+        </header>
+        <div class="menu">
+            <div class="item"><a>About</a></div>
+            <div class="item"><a class="sub-btn">Course Delivery
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+                <div class="sub-menu">
+                    <a href="" class="sub-item">ILT Development</a>
+                    <a href="" class="sub-item">eLearning Development</a>
+                    <a href="" class="sub-item">Virtual & Blended Learning</a>
+                    <a href="" class="sub-item">Curriculum Development</a>
+                    <a href="" class="sub-item">Language Translations</a>
+                    <a href="" class="sub-item">Labs as service</a>
+                </div>
             </div>
-            <div class="dropdown3">
-                <a href="#" onclick="toggleDropdown3()">Continuous Learning Delivery</a>
-                <ul class="dropdown-list3" id="dropdownList3">
-                    <li><a href="#">Content Curation</a></li>
-                    <li><a href="#">ILT to eLearning</a></li>
-                    <li><a href="#">Rapid eLearning</a></li>
-                    <li><a href="#">Content Maintenance</a></li>
-                    <li><a href="#">Social Learning</a></li>
-                </ul>
-            </div>
-            <a href="#">Multimedia Development</a>
-            <a href="#">Learning Technologies</a>
-            <a href="#">L&D Advisory</a>
+            <div class="item"><a class="sub-btn"><i class="fas"></i>Immersive Learning Delivery
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+                <div class="sub-menu">
+                    <a href="" class="sub-item">Scenario Based Delivery</a>
+                    <a href="" class="sub-item">Gamification</a>
+                    <a href="" class="sub-item">Interactive Video Learning</a>
+                    <a href="" class="sub-item">Branch Simulations</a>
 
+                </div>
+            </div>
+            <div class="item"><a class="sub-btn"><i class="fas"></i>Continuous Learning Delivery
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+                <div class="sub-menu">
+                    <a href="" class="sub-item">Content Curation</a>
+                    <a href="" class="sub-item">ILT to eLearning</a>
+                    <a href="" class="sub-item">Rapid wLearning</a>
+                    <a href="" class="sub-item">Content Maintenance</a>
+                    <a href="" class="sub-item">Social Learning</a>
+
+                </div>
+            </div>
+            <div class="item"><a><i class="fas"></i>Multimedia Development</a></div>
+            <div class="item"><a><i class="fas"></i>Learning Technologies</a></div>
+            <div class="item"><a><i class="fas"></i>L&D Advisory</a></div>
         </div>
     </div>
 
-    
+
     <div class="content">
         <div class="work-process">
             <div class="h1">
@@ -90,7 +99,8 @@
             </div>
             <div class="h2title">
                 <h2>To ensure our next face-to-face virtual meeting remains highly productive, let's collaborate and
-                    create something truly awesome together. Kindly follow the simple instructions provided below.</h2>
+                    create something truly awesome together. Kindly follow the simple instructions provided below.
+                </h2>
             </div>
         </div>
 
@@ -99,7 +109,8 @@
             <div class="left-1">
                 <h1>Understanding you better</h1>
                 <p>Could you kindly assist us in getting to know you better by sharing some details about your
-                    communication preferences and contact information? Your cooperation would be truly appreciated.</p>
+                    communication preferences and contact information? Your cooperation would be truly appreciated.
+                </p>
             </div>
             <div class="circle1">
                 <div class="number1">1</div>
@@ -179,7 +190,8 @@
         <div class="third">
             <div class="left-3">
                 <h1>Assigning a subject matter expert</h1>
-                <p>By gracefully choosing one or more services from the list provided to the right, we will be able to
+                <p>By gracefully choosing one or more services from the list provided to the right, we will be able
+                    to
                     add a couple of more experts from the relevant vertical and they will be part of our upcoming
                     virtual meeting.
                 </p>
@@ -195,7 +207,8 @@
                             <input type="checkbox" name="option1" value="Course Development"> Course Development
                         </label>
                         <label>
-                            <input type="checkbox" name="option2" value="Instructional Design Services"> Instructional
+                            <input type="checkbox" name="option2" value="Instructional Design Services">
+                            Instructional
                             Design Services
                         </label>
                     </div>
@@ -205,13 +218,15 @@
                             Development
                         </label>
                         <label>
-                            <input type="checkbox" name="option4" value="ILT or VLT or eLearning Development"> ILT or
+                            <input type="checkbox" name="option4" value="ILT or VLT or eLearning Development"> ILT
+                            or
                             VLT or eLearning Development
                         </label>
                     </div>
                     <div class="options-row">
                         <label>
-                            <input type="checkbox" name="option5" value="Trainers or Subject Matter experts"> Trainers
+                            <input type="checkbox" name="option5" value="Trainers or Subject Matter experts">
+                            Trainers
                             or Subject Matter experts
                         </label>
                         <label>
@@ -236,7 +251,8 @@
         <div class="fourth">
             <div class="left-4">
                 <h1>Okay, just one last step. Let’s block a time convenient to you.</h1>
-                <p>Join our inaugural virtual meet for meaningful discussions, creative brainstorming, and finalizing
+                <p>Join our inaugural virtual meet for meaningful discussions, creative brainstorming, and
+                    finalizing
                     project requirements. Together, we'll craft thoughtful action points for a successful outcome.
                 </p>
             </div>
@@ -291,7 +307,26 @@
         </div>
     </div>
     <script src="js/script.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //jquery fro expand and collapse the sidebar
+            $('.circle-icons').click(function () {
+                $('.side-bar').addClass('active');
+                $('.circle-icons').css("visibility","hidden")
+            });
+            //close button
+            $('.close-btn').click(function(){
+                $('.side-bar').removeClass('active');
+                $('.circle-icons').css("visibility", "visible")
+            });
+            // sub menus
+            $('.sub-btn').click(function(){
+                $(this).next('.sub-menu').slideToggle();
+                $(this).find('.dropdown').toggleClass('rotate');
+            });
+        })  
+    </script>
 </body>
 
 </html>
